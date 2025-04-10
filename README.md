@@ -11,5 +11,4 @@ This is a simple and effective To-Do List Management application built using Pyt
 
 ### 📂 Use Cases
 - Keep track of daily goals
-- Practice basic Python programming
 - Build the foundation for a future GUI/web version of a to-do app
