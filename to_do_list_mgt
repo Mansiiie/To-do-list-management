@@ -1,0 +1,45 @@
+def task():
+    tasks = []
+    print("-----welcome to the task management-----")
+
+    #print("1.Add\n2.Update\n3.Delete\n4.View\n5.Exit program..\n")
+    total_task=int(input("Enter how many task you want to add : "))
+    for i in range(1,total_task+1):
+        task_name = input(f"Enter task {i} = ")
+        tasks.append(task_name)
+        print(f"Today's tasks are:\n{tasks}")
+
+    while True:
+        operation = int(input("1.Add\n2.Update\n3.Delete\n4.View\n5.Exit program..\n"))
+        if operation == 1:
+            add = input("Enter task name you want to add=")
+            tasks.append(add)
+            print(f"Task {add} has been successfully added!...")
+        elif operation == 2:
+            upd_value = input("Enter task name you want to update=")
+            if upd_value in tasks:
+                upd = input("Enter New Task:")
+                ind = tasks.index(upd_value)
+                tasks[ind] = upd
+                print(f"Task {upd} has been successfully updated...")
+            else:
+                print("entered task is not in the task list check again..")
+        elif operation == 3:
+            del_val = input("Enter task name you want to delete=")
+            if del_val in tasks:
+                ind = tasks.index(del_val)
+                del tasks[ind]
+                print(f"Task {del_val} has been successfully deleted...")
+            else:
+                print("entered task is not in the task list check again..")
+        elif operation == 4:
+                print(f"Today's Tasks:={tasks}")
+        elif operation == 5:
+            print("close program successfully!")
+            break
+        else:
+            print("Invalid Input Enter Integer between 1 to 5")
+
+task()
+
+
